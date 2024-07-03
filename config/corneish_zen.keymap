@@ -23,9 +23,14 @@
     combos {
         compatible = "zmk,combos";
 
-        MO4 {
+        MO5 {
             bindings = <&mo 5>;
             key-positions = <40 39>;
+        };
+
+        Mo5 {
+            bindings = <&mo 5>;
+            key-positions = <37 38>;
         };
     };
 
@@ -103,10 +108,10 @@
 
         KEYBOARD {
             bindings = <
-&trans  &trans        &trans           &trans        &trans        &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &out OUT_BLE  &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &out OUT_USB  &rgb_ug RGB_TOG  &trans        &sys_reset    &bootloader       &trans  &trans  &trans  &trans  &trans  &trans
-                                       &trans        &trans        &trans            &trans  &trans  &trans
+&trans  &trans        &trans           &trans        &trans        &trans            &trans       &trans      &trans  &trans  &trans  &trans
+&trans  &out OUT_BLE  &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR_ALL    &trans       &trans      &trans  &trans  &trans  &trans
+&trans  &out OUT_USB  &rgb_ug RGB_TOG  &trans        &sys_reset    &bootloader       &bootloader  &sys_reset  &trans  &trans  &trans  &trans
+                                       &trans        &trans        &trans            &trans       &trans      &trans
             >;
         };
     };
