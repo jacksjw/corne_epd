@@ -24,7 +24,7 @@
         compatible = "zmk,combos";
 
         MO4 {
-            bindings = <&mo 4>;
+            bindings = <&mo 5>;
             key-positions = <40 39>;
         };
     };
@@ -42,10 +42,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q             &kp W        &kp E           &kp R        &kp T            &kp Y                 &kp U            &kp I           &kp O          &kp P                 &none
-&none  &mt A LEFT_SHIFT  &kp S        &lt 3 D         &kp F        &kp G            &kp H                 &kp J            &kp K           &kp L          &mt SEMI RIGHT_SHIFT  &none
-&none  &kp Z             &mt X LCTRL  &mt C LEFT_ALT  &mt LG(V) V  &kp B            &kp N                 &mt LG(M) M      &mt COMMA RALT  &mt DOT RCTRL  &kp FSLH              &none
-                                      &kp ESCAPE      &lt 1 SPACE  &mt LCTRL TAB    &mt LEFT_SHIFT ENTER  &lt 2 BACKSPACE  &kp RALT
+&none  &kp Q             &kp W        &kp E           &kp R        &kp T               &kp Y                 &kp U            &kp I           &kp O          &kp P                 &none
+&none  &mt A LEFT_SHIFT  &kp S        &kp D           &lt 4 F      &kp G               &kp H                 &lt 3 J          &kp K           &kp L          &mt SEMI RIGHT_SHIFT  &none
+&none  &kp Z             &mt X LCTRL  &mt C LEFT_ALT  &mt LG(V) V  &kp B               &kp N                 &mt LG(M) M      &mt COMMA RALT  &mt DOT RCTRL  &kp FSLH              &none
+                                      &none           &lt 1 SPACE  &mt LCTRL ESCAPE    &mt LEFT_SHIFT ENTER  &lt 2 BACKSPACE  &none
             >;
         };
 
@@ -62,7 +62,7 @@
 &none  &kp LS(NUMBER_1)  &kp LS(N2)            &kp LS(N3)             &kp LS(N4)        &kp LS(N5)           &kp LS(N6)     &kp LS(N7)     &kp LS(N8)    &kp LS(N9)    &kp LS(N0)   &none
 &none  &kp N7            &kp N5                &kp NUMBER_3           &kp NUMBER_1      &kp N9               &kp N0         &kp NUMBER_2   &kp NUMBER_4  &kp NUMBER_6  &kp N8       &none
 &none  &kp SQT           &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &kp LS(MINUS)  &kp LS(EQUAL)  &kp MINUS     &kp EQUAL     &kp LS(SQT)  &none
-                                               &none                  &none             &kp CAPS             &kp LS(BSLH)   &kp BSLH       &none
+                                               &none                  &none             &trans               &kp LS(BSLH)   &kp BSLH       &none
             >;
         };
 
@@ -79,16 +79,25 @@
 &none  &kp F8         &kp F7                &kp F6      &kp F5             &kp F11            &kp F12     &kp HOME          &kp PAGE_DOWN  &kp PAGE_UP   &kp END          &none
 &none  &kp F4         &kp F3                &kp F2      &kp F1             &kp F9             &kp F10     &kp LEFT_ARROW    &kp DOWN       &kp UP_ARROW  &kp RIGHT_ARROW  &none
 &none  &kp C_BRI_DEC  &kp C_BRIGHTNESS_INC  &kp C_MUTE  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP    &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT     &kp C_STOP    &kp PRINTSCREEN  &none
-                                            &none       &kp DEL            &kp CLCK           &trans      &none             &none
+                                            &none       &kp TAB            &kp CLCK           &trans      &none             &none
             >;
         };
 
         NUM_PAD {
             bindings = <
-&trans  &trans  &trans            &trans                  &trans                  &trans    &kp KP_ENTER   &kp N7         &kp N8        &kp N9        &kp PLUS         &trans
-&trans  &none   &kp LC(LEFT_ALT)  &none                   &kp LC(LA(LEFT_SHIFT))  &trans    &kp EQUAL      &kp NUMBER_4   &kp N5        &kp NUMBER_6  &kp MINUS        &trans
-&trans  &trans  &kp LC(LEFT_ALT)  &kp LC(LA(LEFT_SHIFT))  &trans                  &trans    &kp KP_DIVIDE  &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &trans
-                                  &trans                  &trans                  &trans    &trans         &kp BACKSPACE  &kp N0
+&trans  &kp KP_MULTIPLY  &kp N7        &kp N8        &kp N9         &kp KP_MINUS    &kp KP_ENTER   &kp N7        &kp N8        &kp N9        &kp PLUS         &trans
+&trans  &kp KP_DIVIDE    &kp NUMBER_4  &kp N5        &kp NUMBER_6   &kp KP_PLUS     &kp EQUAL      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS        &trans
+&trans  &kp N0           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp KP_EQUAL    &kp KP_DIVIDE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &trans
+                                       &none         &kp BACKSPACE  &kp KP_ENTER    &kp BACKSPACE  &kp N0        &none
+            >;
+        };
+
+        Accessaries {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans        &trans          &trans            &trans      &kp GRAVE  &kp LS(GRAVE)  &kp BACKSPACE  &trans
+&trans  &trans  &trans  &trans  &none         &trans          &kp LS(CAPSLOCK)  &kp ESCAPE  &kp TAB    &kp DEL        &kp ENTER      &trans
+&trans  &trans  &trans  &trans  &trans        &trans          &trans            &trans      &trans     &trans         &trans         &trans
+                        &trans  &kp LEFT_ALT  &kp LEFT_GUI    &kp LEFT_SHIFT    &kp LCTRL   &trans
             >;
         };
 
