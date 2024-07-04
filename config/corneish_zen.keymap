@@ -23,12 +23,12 @@
     combos {
         compatible = "zmk,combos";
 
-        MO5 {
+        MO5_right {
             bindings = <&mo 5>;
             key-positions = <40 39>;
         };
 
-        Mo5 {
+        MO5_left {
             bindings = <&mo 5>;
             key-positions = <37 38>;
         };
