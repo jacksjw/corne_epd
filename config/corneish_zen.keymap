@@ -28,6 +28,7 @@
 
         // zmk,matrix_transform = &five_column_transform;
     };
+
     behaviors {
         ht: hold_tap {
             label = "hold_tap";
@@ -39,18 +40,19 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
+
         mmv {
             acceleration-exponent = <1>;      // 1
             time-to-max-speed-ms = <300>;    // 40
             delay-ms = <0>;                   // 0
         };
+
         msc {
             acceleration-exponent = <0>;      // 0
             time-to-max-speed-ms = <40>;      // 500
             delay-ms = <0>;                   // 10
         };
     };
-
 };
 
 / {
@@ -117,7 +119,7 @@
             bindings = <
 &none  &kp F8         &kp F7                &kp F6      &kp F5             &kp F11            &kp F12     &kp HOME          &kp PAGE_DOWN  &kp PAGE_UP   &kp END          &none
 &none  &kp F4         &kp F3                &kp F2      &kp F1             &kp F9             &kp F10     &kp LEFT_ARROW    &kp DOWN       &kp UP_ARROW  &kp RIGHT_ARROW  &none
-&none  &kp C_BRI_DEC  &kp C_BRIGHTNESS_INC  &kp C_MUTE  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP    &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT     &kp C_STOP    &kp PRINTSCREEN  &none
+&none  &kp C_BRI_DEC  &kp C_BRIGHTNESS_INC  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT     &kp C_STOP    &kp PRINTSCREEN  &none
                                             &none       &kp TAB            &kp CLCK           &trans      &none             &none
             >;
         };
