@@ -41,6 +41,13 @@
             bindings = <&kp>, <&kp>;
         };
 
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "NEW_BEHAVIOR";
+            #sensor-binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
+
         mmv {
             acceleration-exponent = <1>;      // 1
             time-to-max-speed-ms = <300>;    // 40
@@ -126,28 +133,28 @@
 
         NUM_PAD {
             bindings = <
-&trans  &kp KP_MULTIPLY  &kp N7        &kp N8        &kp N9         &kp KP_MINUS    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp KP_DIVIDE    &kp NUMBER_4  &kp N5        &kp NUMBER_6   &kp KP_PLUS     &trans  &none   &trans  &trans  &trans  &trans
-&trans  &kp N0           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp KP_EQUAL    &trans  &trans  &trans  &trans  &trans  &trans
-                                       &none         &kp BACKSPACE  &kp KP_ENTER    &trans  &trans  &none
+&none  &kp KP_MULTIPLY  &kp N7        &kp N8        &kp N9         &kp KP_MINUS    &trans  &trans  &trans  &trans  &trans  &none
+&none  &kp KP_DIVIDE    &kp NUMBER_4  &kp N5        &kp NUMBER_6   &kp KP_PLUS     &trans  &none   &trans  &trans  &trans  &none
+&none  &kp N0           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp KP_EQUAL    &trans  &trans  &trans  &trans  &trans  &none
+                                      &none         &kp BACKSPACE  &kp KP_ENTER    &trans  &trans  &none
             >;
         };
 
         Accessaries {
             bindings = <
-&trans  &trans  &trans  &trans  &trans        &trans          &trans            &trans      &kp GRAVE  &kp LS(GRAVE)  &kp BACKSPACE  &trans
-&trans  &trans  &trans  &trans  &none         &trans          &kp LS(CAPSLOCK)  &kp ESCAPE  &kp TAB    &kp DEL        &kp ENTER      &trans
-&trans  &trans  &trans  &trans  &trans        &trans          &trans            &trans      &trans     &trans         &trans         &trans
-                        &trans  &kp LEFT_ALT  &kp LEFT_GUI    &kp LEFT_SHIFT    &kp LCTRL   &trans
+&none  &trans  &trans  &trans  &trans        &trans          &trans            &trans      &kp GRAVE  &kp LS(GRAVE)  &kp BACKSPACE  &none
+&none  &trans  &trans  &trans  &none         &trans          &kp LS(CAPSLOCK)  &kp ESCAPE  &kp TAB    &kp DEL        &kp ENTER      &none
+&none  &trans  &trans  &trans  &trans        &trans          &trans            &trans      &trans     &trans         &trans         &none
+                       &none   &kp LEFT_ALT  &kp LEFT_GUI    &kp LEFT_SHIFT    &kp LCTRL   &none
             >;
         };
 
         KEYBOARD {
             bindings = <
-&trans  &trans        &trans           &trans        &trans        &trans            &trans       &trans      &trans  &trans  &trans  &trans
-&trans  &out OUT_BLE  &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR_ALL    &trans       &trans      &trans  &trans  &trans  &trans
-&trans  &out OUT_USB  &rgb_ug RGB_TOG  &soft_off     &sys_reset    &bootloader       &bootloader  &sys_reset  &trans  &trans  &trans  &trans
-                                       &trans        &trans        &trans            &trans       &trans      &trans
+&none  &trans        &trans           &trans        &trans        &trans            &trans       &trans      &trans     &trans  &trans  &none
+&none  &out OUT_BLE  &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR_ALL    &trans       &trans      &trans     &trans  &trans  &none
+&none  &out OUT_USB  &rgb_ug RGB_TOG  &soft_off     &sys_reset    &bootloader       &bootloader  &sys_reset  &soft_off  &trans  &trans  &none
+                                      &none         &trans        &trans            &trans       &trans      &none
             >;
         };
     };
