@@ -14,7 +14,6 @@
 &mt {
     tapping-term-ms = <220>;
     quick-tap-ms = <150>;
-    hold-trigger-key-positions = <>;
     flavor = "tap-preferred";
 };
 
@@ -52,14 +51,6 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        tri_layer {
-            if-layers = <RIG LEF>;
-            then-layer = <TRI>;
-        };
-    };
 };
 
 / {
