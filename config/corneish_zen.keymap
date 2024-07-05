@@ -41,11 +41,11 @@
             bindings = <&kp>, <&kp>;
         };
 
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            label = "NEW_BEHAVIOR";
-            #sensor-binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
+        esc_tab_ctrl: esc_tab_ctrl {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ESC_TAB_CTRL";
+            #binding-cells = <0>;
+            bindings = <&ht LCTRL ESCAPE>, <&kp TAB>;
         };
 
         mmv {
@@ -90,10 +90,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q             &kp W        &kp E           &kp R           &kp T               &kp Y                 &kp U            &kp I                &kp O             &kp P                      &none
-&none  &mt LEFT_SHIFT A  &kp S        &kp D           &lt 4 F         &kp G               &kp H                 &lt 3 J          &kp K                &kp L             &mt RIGHT_SHIFT SEMICOLON  &none
-&none  &kp Z             &mt LCTRL X  &mt LEFT_ALT C  &mt LEFT_GUI V  &kp B               &kp N                 &mt RIGHT_GUI M  &mt RIGHT_ALT COMMA  &mt RCTRL PERIOD  &kp FSLH                   &none
-                                      &none           &lt 1 SPACE     &mt LCTRL ESCAPE    &mt LEFT_SHIFT ENTER  &lt 2 BACKSPACE  &none
+&none  &kp Q             &kp W        &kp E           &kp R           &kp T            &kp Y                 &kp U            &kp I                &kp O             &kp P                      &none
+&none  &ht LEFT_SHIFT A  &kp S        &kp D           &lt 4 F         &kp G            &kp H                 &lt 3 J          &kp K                &kp L             &ht RIGHT_SHIFT SEMICOLON  &none
+&none  &kp Z             &ht LCTRL X  &ht LEFT_ALT C  &ht LEFT_GUI V  &kp B            &kp N                 &ht RIGHT_GUI M  &ht RIGHT_ALT COMMA  &ht RCTRL PERIOD  &kp FSLH                   &none
+                                      &none           &lt 1 SPACE     &esc_tab_ctrl    &ht LEFT_SHIFT ENTER  &lt 2 BACKSPACE  &none
             >;
         };
 
