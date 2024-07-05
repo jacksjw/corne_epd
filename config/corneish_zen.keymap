@@ -80,7 +80,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        base {
             display-name = "QWERTY";
 
             // --------------------------------------------------------------------------------
@@ -93,7 +93,7 @@
 &none  &kp Q             &kp W        &kp E           &kp R           &kp T            &kp Y        &kp U            &kp I                &kp O             &kp P                      &none
 &none  &ht LEFT_SHIFT A  &kp S        &kp D           &lt 5 F         &kp G            &kp H        &lt 4 J          &kp K                &kp L             &ht RIGHT_SHIFT SEMICOLON  &none
 &none  &kp Z             &ht LCTRL X  &ht LEFT_ALT C  &ht LEFT_GUI V  &kp B            &kp N        &ht RIGHT_GUI M  &ht RIGHT_ALT COMMA  &ht RCTRL PERIOD  &kp FSLH                   &none
-                                      &none           &lt 1 SPACE     &esc_tab_ctrl    &lt 3 ENTER  &lt 3 BACKSPACE  &none
+                                      &none           &lt 1 SPACE     &esc_tab_ctrl    &lt 3 ENTER  &lt 2 BACKSPACE  &none
             >;
         };
 
@@ -106,7 +106,7 @@
             >;
         };
 
-        lower_layer {
+        SYMB {
             display-name = "Symbles";
 
             // -----------------------------------------------------------------------------------------
@@ -118,13 +118,13 @@
             bindings = <
 &none  &kp EXCLAMATION  &kp AT_SIGN     &kp HASH         &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp STAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
 &none  &kp APOS         &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LBKT    &kp RBKT       &kp UNDER  &kp PLUS       &kp MINUS  &kp EQUAL             &kp DOUBLE_QUOTES      &none
-&none  &kp GRAVE        &kp BSLH        &none            &none       &none          &none      &none          &none      &kp PIPE              &kp TILDE              &none
-                                        &none            &none       &trans         &kp LCTRL  &kp LALT       &none
+&none  &kp GRAVE        &kp BSLH        &none            &kp LGUI    &kp LSHFT      &kp RSHFT  &kp LGUI       &none      &kp PIPE              &kp TILDE              &none
+                                        &none            &kp LALT    &kp LCTRL      &trans     &none          &none
             >;
         };
 
-        raise_layer {
-            display-name = "FUNC_NAVI_SYS";
+        fun_nav_media {
+            display-name = "FUNC_NAVI_MEDIA";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
@@ -142,10 +142,10 @@
 
         NUM_PAD {
             bindings = <
-&none  &kp KP_MULTIPLY  &kp N7        &kp N8        &kp N9         &kp KP_MINUS    &trans     &kp N7  &kp N8  &kp N9  &trans  &none
-&none  &kp KP_DIVIDE    &kp NUMBER_4  &kp N5        &kp NUMBER_6   &kp KP_PLUS     &trans     &none   &kp N2  &kp N3  &trans  &none
-&none  &kp N0           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp KP_EQUAL    &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp N0  &none
-                                      &none         &kp BACKSPACE  &kp KP_DOT      &trans     &trans  &none
+&none  &kp STAR   &kp N7        &kp N8        &kp N9         &kp MINUS    &trans     &kp N7  &kp N8  &kp N9  &trans  &none
+&none  &kp SLASH  &kp NUMBER_4  &kp N5        &kp NUMBER_6   &kp PLUS     &trans     &none   &kp N2  &kp N3  &trans  &none
+&none  &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp EQUAL    &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp N0  &none
+                                &none         &kp BACKSPACE  &kp DOT      &trans     &trans  &none
             >;
         };
 
