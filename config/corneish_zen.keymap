@@ -149,19 +149,19 @@
 
         NUM_PAD {
             bindings = <
-&none  &kp STAR   &kp N7        &kp N8        &kp N9         &kp MINUS    &kp MINUS  &kp N7  &kp N8  &kp N9  &kp STAR   &none
-&none  &kp SLASH  &kp NUMBER_4  &kp N5        &kp NUMBER_6   &kp PLUS     &kp PLUS   &none   &kp N2  &kp N3  &kp SLASH  &none
-&none  &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp EQUAL    &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp N0     &none
-                                &none         &kp BACKSPACE  &kp DOT      &trans     &trans  &none
+&none  &kp STAR   &kp N7        &kp N8        &kp N9         &kp MINUS    &kp MINUS  &kp N7           &kp N8  &kp N9  &kp STAR   &none
+&none  &kp SLASH  &kp NUMBER_4  &kp N5        &kp NUMBER_6   &kp PLUS     &kp PLUS   &none            &kp N2  &kp N3  &kp SLASH  &none
+&none  &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp EQUAL    &kp EQUAL  &kp N4           &kp N5  &kp N6  &kp N0     &none
+                                &none         &kp BACKSPACE  &kp DOT      &kp LC(V)  &ht LC(X) LC(C)  &none
             >;
         };
 
         Accessaries {
             bindings = <
-&none  &trans  &trans  &trans  &trans        &trans                 &kp TAB         &kp CAPS   &kp ESCAPE  &kp DEL  &kp BACKSPACE  &none
-&none  &trans  &trans  &trans  &none         &trans                 &trans          &trans     &trans      &trans   &kp ENTER      &none
-&none  &trans  &trans  &trans  &trans        &double_click_tgame    &trans          &trans     &trans      &trans   &trans         &none
-                       &none   &kp LEFT_ALT  &kp LEFT_GUI           &kp LEFT_SHIFT  &kp LCTRL  &none
+&none  &trans  &trans  &trans  &trans        &trans                 &kp TAB         &kp CAPS            &kp ESCAPE  &kp DEL  &kp BACKSPACE  &none
+&none  &trans  &trans  &trans  &none         &trans                 &trans          &kp LC(LEFT_SHIFT)  &trans      &trans   &kp ENTER      &none
+&none  &trans  &trans  &trans  &trans        &double_click_tgame    &trans          &trans              &trans      &trans   &trans         &none
+                       &none   &kp LEFT_ALT  &kp LEFT_GUI           &kp LEFT_SHIFT  &kp LCTRL           &none
             >;
         };
 
