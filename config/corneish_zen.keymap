@@ -48,9 +48,9 @@
             bindings = <&ht LCTRL ESCAPE>, <&kp TAB>;
         };
 
-        double_click: double_click {
+        double_click_tgame: double_click_tgame {
             compatible = "zmk,behavior-tap-dance";
-            label = "DOUBLE_CLICK";
+            label = "DOUBLE_CLICK_TGAME";
             #binding-cells = <0>;
             bindings = <&trans>, <&tog 6>;
         };
@@ -158,19 +158,19 @@
 
         Accessaries {
             bindings = <
-&none  &trans  &trans  &trans  &trans        &trans          &kp TAB         &kp CAPS   &kp ESCAPE  &kp DEL  &kp BACKSPACE  &none
-&none  &trans  &trans  &trans  &none         &trans          &trans          &trans     &trans      &trans   &kp ENTER      &none
-&none  &trans  &trans  &trans  &trans        &trans          &double_click   &trans     &trans      &trans   &trans         &none
-                       &none   &kp LEFT_ALT  &kp LEFT_GUI    &kp LEFT_SHIFT  &kp LCTRL  &none
+&none  &trans  &trans  &trans  &trans        &trans          &kp TAB              &kp CAPS   &kp ESCAPE  &kp DEL  &kp BACKSPACE  &none
+&none  &trans  &trans  &trans  &none         &trans          &trans               &trans     &trans      &trans   &kp ENTER      &none
+&none  &trans  &trans  &trans  &trans        &trans          &double_click_tgame  &trans     &trans      &trans   &trans         &none
+                       &none   &kp LEFT_ALT  &kp LEFT_GUI    &kp LEFT_SHIFT       &kp LCTRL  &none
             >;
         };
 
         Game {
             bindings = <
-&trans  &kp TAB       &kp Q           &kp W    &kp E        &kp R        &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &ht LSHIFT G  &kp A           &kp S    &kp D        &kp F        &trans         &trans  &trans  &trans  &trans  &trans
-&trans  &kp LCTRL     &ht LEFT_ALT Z  &kp X    &kp C        &kp V        &double_click  &trans  &trans  &trans  &trans  &trans
-                                      &kp ESC  &lt 7 ENTER  &kp SPACE    &trans         &trans  &trans
+&trans  &kp TAB       &kp Q           &kp W    &kp E        &kp R        &trans               &trans  &trans  &trans  &trans  &trans
+&trans  &ht LSHIFT G  &kp A           &kp S    &kp D        &kp F        &trans               &trans  &trans  &trans  &trans  &trans
+&trans  &kp LCTRL     &ht LEFT_ALT Z  &kp X    &kp C        &kp V        &double_click_tgame  &trans  &trans  &trans  &trans  &trans
+                                      &kp ESC  &lt 7 ENTER  &kp SPACE    &trans               &trans  &trans
             >;
         };
 
