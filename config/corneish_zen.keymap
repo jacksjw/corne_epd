@@ -158,10 +158,10 @@
 
         Accessaries {
             bindings = <
-&none  &trans  &trans  &trans  &trans        &trans          &kp TAB              &kp CAPS   &kp ESCAPE  &kp DEL  &kp BACKSPACE  &none
-&none  &trans  &trans  &trans  &none         &trans          &trans               &trans     &trans      &trans   &kp ENTER      &none
-&none  &trans  &trans  &trans  &trans        &trans          &double_click_tgame  &trans     &trans      &trans   &trans         &none
-                       &none   &kp LEFT_ALT  &kp LEFT_GUI    &kp LEFT_SHIFT       &kp LCTRL  &none
+&none  &trans  &trans  &trans  &trans        &trans                 &kp TAB         &kp CAPS   &kp ESCAPE  &kp DEL  &kp BACKSPACE  &none
+&none  &trans  &trans  &trans  &none         &trans                 &trans          &trans     &trans      &trans   &kp ENTER      &none
+&none  &trans  &trans  &trans  &trans        &double_click_tgame    &trans          &trans     &trans      &trans   &trans         &none
+                       &none   &kp LEFT_ALT  &kp LEFT_GUI           &kp LEFT_SHIFT  &kp LCTRL  &none
             >;
         };
 
