@@ -149,10 +149,10 @@
 
         Accessaries {
             bindings = <
-&none  &trans  &trans                    &trans                &trans            &trans                 &kp TAB            &kp CAPS           &kp ESCAPE            &kp DEL                   &kp BACKSPACE  &none
-&none  &trans  &kp LC(LS(LEFT_ALT))      &kp LC(LEFT_SHIFT)    &kp LC(LEFT_ALT)  &trans                 &trans             &kp RC(RIGHT_ALT)  &kp RC(RIGHT_SHIFT)   &kp RC(RS(RIGHT_ALT))     &kp ENTER      &none
-&none  &none   &kp LC(LS(LA(LEFT_GUI)))  &kp LC(LA(LEFT_GUI))  &kp LS(LEFT_ALT)  &double_click_tgame    &trans             &kp RS(RIGHT_ALT)  &kp RC(RA(LEFT_GUI))  &kp RC(RS(RA(LEFT_GUI)))  &none          &none
-                                         &none                 &kp LS(LEFT_GUI)  &kp LA(LEFT_GUI)       &kp RA(RIGHT_GUI)  &kp RS(RIGHT_GUI)  &none
+&none  &kp K_PASTE  &kp K_CUT                 &trans                &trans            &trans                 &kp TAB            &kp CAPS           &kp ESCAPE            &kp DEL                   &kp BACKSPACE  &none
+&none  &kp K_COPY   &kp LC(LS(LEFT_ALT))      &kp LC(LEFT_SHIFT)    &kp LC(LEFT_ALT)  &trans                 &trans             &kp RC(RIGHT_ALT)  &kp RC(RIGHT_SHIFT)   &kp RC(RS(RIGHT_ALT))     &kp ENTER      &none
+&none  &none        &kp LC(LS(LA(LEFT_GUI)))  &kp LC(LA(LEFT_GUI))  &kp LS(LEFT_ALT)  &double_click_tgame    &trans             &kp RS(RIGHT_ALT)  &kp RC(RA(LEFT_GUI))  &kp RC(RS(RA(LEFT_GUI)))  &none          &none
+                                              &none                 &kp LS(LEFT_GUI)  &kp LA(LEFT_GUI)       &kp RA(RIGHT_GUI)  &kp RS(RIGHT_GUI)  &none
             >;
         };
 
