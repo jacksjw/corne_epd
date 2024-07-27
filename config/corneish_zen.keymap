@@ -19,7 +19,7 @@
 
 &lt {
     tapping-term-ms = <220>;
-    quick-tap-ms = <200>;
+    quick-tap-ms = <175>;
 };
 
 / {
@@ -46,6 +46,8 @@
             label = "ESC_TAB_CTRL";
             #binding-cells = <0>;
             bindings = <&ht LCTRL ESCAPE>, <&kp TAB>;
+
+            tapping-term-ms = <220>;
         };
 
         double_click_tgame: double_click_tgame {
